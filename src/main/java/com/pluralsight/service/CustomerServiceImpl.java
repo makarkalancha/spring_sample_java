@@ -7,11 +7,23 @@ import com.pluralsight.repository.CustomerRepository;
 import com.pluralsight.repository.HibernateCustomerRepositoryImpl;
 
 public class CustomerServiceImpl implements CustomerService {
-	private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
+	private CustomerRepository customerRepository;
 	
-	/* (non-Javadoc)
-	 * @see com.pluralsight.service.CustomerService#findAll()
-	 */
+	
+	public CustomerServiceImpl() {
+		
+	}
+
+	public CustomerServiceImpl(CustomerRepository customerRepository) {
+		System.out.println("We are using contructor injection");
+		this.customerRepository = customerRepository;
+	}
+
+	public void setCustomerRepository(CustomerRepository customerRepository) {
+		System.out.println("We are using setter injection");
+		this.customerRepository = customerRepository;
+	}
+
 	@Override
 	public List<Customer> findAll(){
 		return customerRepository.findAll();
