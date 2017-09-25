@@ -11,10 +11,10 @@ import com.pluralsight.service.CustomerServiceImpl;
 @ComponentScan({"com.pluralsight"})
 public class AppConfig {
 	
-	@Bean(name="customerRepository")
-	public CustomerRepository getCustomerRepository() {
-		return new HibernateCustomerRepositoryImpl();
-	}
+//	@Bean(name="customerRepository")
+//	public CustomerRepository getCustomerRepository() {
+//		return new HibernateCustomerRepositoryImpl();
+//	}
 	
 	@Bean(name="customerService")
 	public CustomerService getCustomerService() {
