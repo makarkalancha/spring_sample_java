@@ -25,5 +25,3 @@ public class AppConfig {
 	}
 	
 }
-//https://app.pluralsight.com/player?name=spring-m5-java-config&mode=live&clip=7&course=spring-fundamentals&author=bryan-hansen
-//Spring Configuration Using Java->Setter Injection Demo
